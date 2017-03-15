@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#e1e1e1"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text"
+        android:text="已经选择的标签" />
+<com.peng.saishi.widget.TagCloudView
+	    android:id="@+id/Addgroup3_tagcloudview1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@id/textView1"
+	    app:tcvBorder="8dp"
+	    app:tcvCanTagClick="true"
+	    app:tcvItemBorderHorizontal="8dp"
+	    app:tcvItemBorderVertical="6dp"
+	    app:tcvTextColor="#123455" />
+    <TextView
+        android:id="@+id/Seeperson_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Addgroup3_tagcloudview1"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text"
+        android:text="可选标签" />
+<com.peng.saishi.widget.TagCloudView
+	    android:id="@+id/Addgroup3_tagcloudview2"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    
+	    android:layout_below="@id/Seeperson_intro"
+	    app:tcvBorder="8dp"
+	    app:tcvCanTagClick="true"
+	    app:tcvItemBorderHorizontal="8dp"
+	    app:tcvItemBorderVertical="6dp"
+	    app:tcvTextColor="#123455" />
+</RelativeLayout>

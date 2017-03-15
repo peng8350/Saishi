@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_notice_layout"
+    android:background="@drawable/lv_bg"
+    android:clickable="true"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/item_notice_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text"
+        android:textColor="#999999"
+        android:layout_centerVertical="true"
+        android:text="周三\nasd" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_notice_image"
+        android:layout_width="60dp"
+        android:layout_toRightOf="@id/item_notice_time"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:placeholderImage="@drawable/loadinggroup"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/item_notice_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/item_notice_image"
+        android:text="小哇而"
+        android:textColor="#000"
+        android:singleLine="true"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/item_notice_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_notice_name"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/item_notice_forward"
+        android:lines="2"
+        android:gravity="bottom"
+        android:text="这里欢迎很多专业一起去比赛,拿到好成绩,热烈欢迎各路的大神"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/item_notice_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableRight="@drawable/forward"
+        android:text="查看详情"
+        android:textSize="@dimen/Small_Text"
+        android:textColor="#999999"
+        android:layout_centerVertical="true"
+  />
+
+</RelativeLayout>

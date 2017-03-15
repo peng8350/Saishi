@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:padding="10dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_questionlist_imageView1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:progressBarImage="@drawable/loading"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:roundedCornerRadius="8dp" />
+
+    <TextView
+        android:id="@+id/item_questionlist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@+id/item_questionlist_imageView1"
+        android:text="为什么会这样那个呢,我的程序没有错"
+        android:textColor="#000"
+        android:textSize="@dimen/middle_text" />
+
+    <TextView
+        android:id="@+id/item_questionlist_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_questionlist_username"
+        android:layout_below="@+id/item_questionlist_title"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:text="\t\t小明"
+        android:textColor="#adadad"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/item_questionlist_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_questionlist_title"
+        android:layout_below="@+id/item_questionlist_content"
+        android:drawableLeft="@drawable/userlittle"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="\t\t小明"
+        android:textColor="#adadad"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/item_questionlist_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_questionlist_username"
+        android:layout_below="@+id/item_questionlist_username"
+        android:drawableLeft="@drawable/time"
+        android:gravity="center"
+        android:text="时间:2016年3"
+        android:textColor="#adadad"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/item_questionlist_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_questionlist_time"
+        android:layout_below="@+id/item_questionlist_time"
+        android:drawableLeft="@drawable/visible"
+        android:gravity="center"
+        android:text="访问量:123"
+        android:textColor="#adadad"
+        android:textSize="@dimen/Small_Text" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/setting"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/setting_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Setting_Top"
+        android:background="#f7f7f7"
+        android:childDivider="#edeef0"
+        android:dividerHeight="1px"
+        android:groupIndicator="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="@null" >
+    </ExpandableListView>
+
+</RelativeLayout>

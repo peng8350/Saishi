@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Reply_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Reply_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="問題正文"
+            android:textColor="@drawable/back_text"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/Answer_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="回復"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/Answer_listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Reply_Top"
+        android:background="#eeeeee"
+        android:childDivider="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="15dp"
+        android:groupIndicator="@null"
+        android:padding="10dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="@null"
+        android:transcriptMode="normal" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/Answer_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@color/Dgreen"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/Answer_inputet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login_et_bg"
+            android:hint="请输入你的解答回复消息.."
+            android:textColor="#adadad"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/Answer_send_btn"
+            android:layout_marginRight="10dp"
+            android:textSize="@dimen/normal_text" />
+        <Button
+        android:id="@+id/Answer_send_btn"
+        android:layout_width="42.0dip"
+        android:layout_height="34.0dip"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/chat_bottombar_btn_selector"
+        android:shadowColor="#ff568ab5"
+        android:shadowDx="0.0"
+        android:shadowDy="-1.0"
+        android:shadowRadius="0.2"
+        android:text="解答"
+        android:layout_centerVertical="true"
+        android:textColor="#fff"
+        android:textSize="14.0sp" />
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

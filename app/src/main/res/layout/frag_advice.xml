@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical"
+    android:padding="7dp" >
+
+    <EditText
+        android:id="@+id/frag_advice_editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reg_et_bg"
+        android:ems="10"
+        android:gravity="left|top"
+        android:hint="请输入你的建议....."
+        android:minHeight="100dp"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frag_advice_editText1"
+        android:layout_marginTop="10dp"
+        android:text="图片说明"
+        android:textColor="#000"
+        android:textSize="@dimen/normal_text" />
+
+    <GridView
+        android:id="@+id/frag_advice_gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView1"
+        android:horizontalSpacing="10dp"
+        android:listSelector="@android:color/transparent"
+        android:layout_above="@+id/frag_advice_btn"
+        android:numColumns="3"
+        android:scrollbars="@null"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+    <Button
+        android:id="@+id/frag_advice_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/login_loginbtn_bg"
+        android:text="提交反馈"
+        android:textColor="#fff"
+        android:textSize="@dimen/middle_text" />
+
+</RelativeLayout>

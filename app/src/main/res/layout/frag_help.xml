@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#eaeaea"
+    android:layout_height="match_parent" >
+
+    <ExpandableListView
+        android:id="@+id/frag_Help_expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:groupIndicator="@null"
+        android:divider="#fff"
+        
+        android:scrollbars="@null"
+        android:childDivider="#fff"
+        android:background="#fff"
+        android:dividerHeight="2dp"
+        android:listSelector="@android:color/transparent"
+        android:layout_alignParentTop="true" >
+    </ExpandableListView>
+
+</RelativeLayout>

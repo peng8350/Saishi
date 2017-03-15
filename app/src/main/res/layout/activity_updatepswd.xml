@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Match_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Match_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改密码"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Match_Top"
+        android:background="#dadada"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <EditText
+            android:id="@+id/updatepswd_editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/reg_et_bg"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="请输入你的旧密码"
+            android:maxLength="20"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/updatepswd_editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reg_et_bg"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="请输入你的新密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/updatepswd_editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/reg_et_bg"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:drawablePadding="15dp"
+            android:ems="10"
+            android:hint="再次确认你的新密码"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text" >
+        </EditText>
+
+        <Button
+            android:id="@+id/updatepswd_button1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_loginbtn_bg"
+            android:text="提交"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+</RelativeLayout>

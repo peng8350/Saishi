@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/activity_shoucang_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/activity_shoucang_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="收藏"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/activity_shoucang_listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/activity_shoucang_Top"
+        android:background="#e2e4fe"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:listSelector="@android:color/transparent"
+        android:paddingTop="8dp"
+        android:scrollbars="@null" >
+    </ListView>
+	<include layout="@layout/include_nodata"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:visibility="gone"
+	    />
+</RelativeLayout>

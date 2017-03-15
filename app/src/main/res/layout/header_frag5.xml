@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:peng="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frag5_top"
+    android:layout_width="match_parent"
+    android:layout_height="200dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/frag5_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/frag5_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="100"
+            fresco:placeholderImage="@drawable/loadinguser"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/frag5_intro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/frag5_image"
+            android:layout_alignLeft="@+id/frag5_tv"
+            android:lines="2"
+            android:layout_marginRight="20dp"
+            android:textColor="#efefef"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/frag5_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/frag5_image"
+            android:layout_marginRight="20dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/frag5_image"
+            android:textColor="#fff"
+            android:textSize="@dimen/big_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

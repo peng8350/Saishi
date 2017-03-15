@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ActionSheetStyleIOS6">
+        <item name="actionSheetBackground">@drawable/actionsheet_as_bg_ios6</item>
+        <item name="cancelButtonBackground">@drawable/actionsheet_as_cancel_bt_bg</item>
+        <item name="otherButtonTopBackground">@drawable/actionsheet_as_other_bt_bg</item>
+        <item name="otherButtonMiddleBackground">@drawable/actionsheet_as_other_bt_bg</item>
+        <item name="otherButtonBottomBackground">@drawable/actionsheet_as_other_bt_bg</item>
+        <item name="otherButtonSingleBackground">@drawable/actionsheet_as_other_bt_bg</item>
+        <item name="cancelButtonTextColor">@android:color/white</item>
+        <item name="otherButtonTextColor">@android:color/black</item>
+        <item name="actionSheetPadding">20dp</item>
+        <item name="otherButtonSpacing">5dp</item>
+        <item name="cancelButtonMarginTop">20dp</item>
+        <item name="actionSheetTextSize">16sp</item>
+    </style>
+
+    <style name="ActionSheetStyleIOS7">
+        <item name="actionSheetBackground">@android:color/transparent</item>
+        <item name="cancelButtonBackground">@drawable/actionsheet_slt_as_ios7_cancel_bt</item>
+        <item name="otherButtonTopBackground">@drawable/actionsheet_slt_as_ios7_other_bt_top</item>
+        <item name="otherButtonMiddleBackground">@drawable/actionsheet_slt_as_ios7_other_bt_middle</item>
+        <item name="otherButtonBottomBackground">@drawable/actionsheet_slt_as_ios7_other_bt_bottom</item>
+        <item name="otherButtonSingleBackground">@drawable/actionsheet_slt_as_ios7_other_bt_single</item>
+        <item name="cancelButtonTextColor">#1E82FF</item>
+        <item name="otherButtonTextColor">#1E82FF</item>
+        <item name="actionSheetPadding">10dp</item>
+        <item name="otherButtonSpacing">0dp</item>
+        <item name="cancelButtonMarginTop">10dp</item>
+        <item name="actionSheetTextSize">16sp</item>
+    </style>
+
+    <style name="MyStyle" parent="@style/AppTheme">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#fff</item>
+    </style>
+    
+    <style name="downstyle" parent="@android:style/Theme.Holo.Light">
+           <item name="android:windowAnimationStyle">@style/activitytrasction</item>
+                 <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

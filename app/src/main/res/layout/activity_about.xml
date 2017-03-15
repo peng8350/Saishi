@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#f1f1f1"
+    android:layout_height="match_parent" >
+
+<RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="关于赛伴"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include
+            layout="@layout/view_back" />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:gravity="center"
+    android:background="#f1f1f1"
+    android:layout_below="@+id/Setting_Top" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/imageView1"
+        android:textColor="#000"
+        android:textSize="@dimen/middle_text"
+        android:layout_marginRight="26dp"
+        android:text="版本号:\t\t\t1.0\nauthor by:     尐鹏\n制作时间:\t\t\t接近两个月\n服务端:\t\tJsp+Servlet\n数据库:\t\t\tMySQL" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lauchicon" />
+
+    
+
+</RelativeLayout>
+<TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/normal_text"
+        android:textColor="#aeaeae"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:text=" @2016-09-30 author by 尐鹏 Copyright" />
+</RelativeLayout>

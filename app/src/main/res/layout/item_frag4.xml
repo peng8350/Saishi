@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:gravity="center_vertical"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_frag4_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/loadinggroup"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:roundedCornerRadius="5dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_frag4_image"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/Seeperson_age"
+        android:layout_toRightOf="@+id/item_frag4_image"
+        android:singleLine="true"
+        android:layout_marginRight="8dp"
+        android:text="小哇而"
+        android:textColor="#000"
+        android:textSize="@dimen/middle_text" />
+
+    <TextView
+        android:id="@+id/Seeperson_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView1"
+        android:gravity="right"
+        android:singleLine="true"
+        android:text="2016-03-16"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/normal_text" />
+
+    <com.peng.saishi.widget.emojicon.EmojiconTextView
+        android:id="@+id/Seeperson_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_frag4_image"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginRight="40dp"
+        android:singleLine="true"
+        android:text="这里欢迎很多专业一起去比赛,拿到好成绩,热烈欢迎各路的大神"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/normal_text" />
+
+    <com.peng.saishi.widget.BadgeView
+        android:id="@+id/badgeView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/Seeperson_age"
+        android:text="1"
+        android:textSize="@dimen/Small_Text" />
+
+</RelativeLayout>

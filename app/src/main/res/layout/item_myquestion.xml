@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:clickable="true"
+    android:padding="5dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_myquestion_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/loadinggroup"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/item_myquestion_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/item_myquestion_head"
+        android:text="小哇而"
+        android:textColor="#f00"
+        android:layout_toLeftOf="@+id/item_myquestion_time"
+        android:layout_marginRight="10dp"
+        android:singleLine="true"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/item_myquestion_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_myquestion_name"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/textView1"
+        android:gravity="bottom"
+        android:text="这里欢迎很多专业一起去比赛,拿到好成绩,热烈欢迎各路的大神"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/Small_Text" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/item_myquestion_name"
+        android:src="@drawable/forward" />
+
+    <TextView
+        android:id="@+id/item_myquestion_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        android:text="3月12日 09:21"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/Small_Text" />
+
+    <CheckBox
+        android:id="@+id/item_myquestion_checkbox"
+        style="@style/MyCheckBox"
+        android:layout_width="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageView1"
+        />
+
+</RelativeLayout>

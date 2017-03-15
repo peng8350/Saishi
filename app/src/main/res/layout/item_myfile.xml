@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:gravity="center_vertical" >
+
+    <LinearLayout
+        android:id="@+id/item_myfileback_layout"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center|right" >
+
+        <Button
+            android:id="@+id/item_myfileback_btn1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="#ff0000"
+            android:text="删除"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/item_myfileback_btn2"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/Dgreen"
+            android:text="详细"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_myfile_font"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_myfile_riv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="100"
+            fresco:failureImageScaleType="centerInside"
+            android:layout_marginLeft="10dp"
+            fresco:placeholderImage="@drawable/loadinggroup"
+            fresco:placeholderImageScaleType="centerCrop"
+ />
+
+        <TextView
+            android:id="@+id/item_myfile_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textColor="#c1c1c1"
+            android:textSize="@dimen/Small_Text" />
+
+        <TextView
+            android:id="@+id/item_myfile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/item_myfile_riv"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/item_myfile_time"
+            android:layout_toRightOf="@id/item_myfile_riv"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="@dimen/middle_text" />
+
+        <TextView
+            android:id="@+id/item_myfile_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_myfile_riv"
+            android:layout_alignLeft="@+id/item_myfile_name"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textColor="#c1c1c1"
+            android:textSize="@dimen/normal_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

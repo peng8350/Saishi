@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.peng.saishi.widget.pinnedheaderlistview.PinnedHeaderListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:footerDividersEnabled="false"
+        android:cacheColorHint="@android:color/transparent"
+        android:scrollbars="@null"
+        android:divider="#cecece"
+        android:dividerHeight="1dp"
+        android:headerDividersEnabled="false" />
+
+

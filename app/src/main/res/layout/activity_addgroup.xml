@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout
+        android:id="@+id/Addgroup_top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+        <TextView
+            android:id="@+id/Addgroup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新组队"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include
+            layout="@layout/view_back" />
+
+        <TextView
+            android:id="@+id/Addgroup_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/middle_text"
+            android:text="完成" />
+
+    </RelativeLayout>
+
+	<com.peng.saishi.widget.NoScrollViewPager
+	    android:id="@+id/Addgroup_pager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@+id/Addgroup_top" >
+</com.peng.saishi.widget.NoScrollViewPager>
+</RelativeLayout>

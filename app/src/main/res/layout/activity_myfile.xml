@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/History_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/History_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的文件"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <com.peng.saishi.widget.swipelistview.SwipeListView
+        android:id="@+id/Myfile_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/History_Top"
+        android:background="#eaeaea"
+        android:divider="#d1d1d1"
+        android:dividerHeight="1px"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="@null"
+        swipe:swipeActionLeft="reveal"
+        swipe:swipeBackView="@+id/item_myfileback_layout"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/item_myfile_font"
+        swipe:swipeMode="left"
+        swipe:swipeOffsetLeft="100dp"
+        swipe:swipeOffsetRight="100dp" >
+    </com.peng.saishi.widget.swipelistview.SwipeListView>
+
+</RelativeLayout>

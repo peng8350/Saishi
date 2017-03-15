@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:clickable="true"
+    android:id="@+id/footer_layout"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/footer_match_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/footer_match_textView1"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/footer_match_textView1"
+        android:text="评价"
+        android:textColor="#000"
+        android:textSize="@dimen/middle_text" />
+
+    <TextView
+        android:id="@+id/footer_match_textView3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@+id/footer_match_textView1"
+        android:layout_below="@+id/footer_match_textView1"
+        android:layout_marginTop="10dp"
+        android:background="@color/Gray" />
+
+    <TextView
+        android:id="@+id/footer_match_textView1"
+        android:layout_width="5dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#325d9b" />
+
+    <com.peng.saishi.widget.MyListView
+        android:id="@+id/footer_match_listview"
+        android:layout_width="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:layout_height="match_parent"
+       	android:divider="@android:color/transparent"
+        android:layout_below="@+id/footer_match_textView3"
+        android:layout_marginTop="5dp"
+        android:dividerHeight="1px"
+        android:scrollbars="@null"
+        />
+
+    <TextView
+        android:id="@+id/footer_match_textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer_match_textView3"
+        android:layout_alignRight="@+id/footer_match_textView3"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text"
+        android:drawableRight="@drawable/forward"
+        android:text="共14条" />
+
+</RelativeLayout>

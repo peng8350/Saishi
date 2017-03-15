@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Reply_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Reply_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选手疑问"
+            android:textColor="@drawable/back_text"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <ImageButton
+            android:id="@+id/Questionlist_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/edit_property_filled"
+            android:textColor="#fff"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/Questionlist_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/Reply_Top"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/questionlist_group_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawableEnd="@drawable/questionlist_group_icon"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:text="时间排序"
+            android:textColor="@drawable/questionlist_group_text"
+            android:textSize="@dimen/middle_text" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/questionlist_group_bg"
+            android:button="@null"
+            android:drawableRight="@drawable/questionlist_group_icon"
+            android:gravity="center"
+            android:paddingRight="30dp"
+            android:text="点击量排序"
+            android:textColor="@drawable/questionlist_group_text"
+            android:textSize="@dimen/middle_text" />
+    </RadioGroup>
+
+    <com.peng.saishi.widget.pulltorefesh.PullToRefreshListView
+        android:id="@+id/Questionlist_listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/Questionlist_group"
+        android:background="#eaeaea"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:scrollbars="@null"
+        app:ptrHeaderTextColor="@color/black" >
+    </com.peng.saishi.widget.pulltorefesh.PullToRefreshListView>
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/include_nodata"
+        android:visibility="gone" />
+
+</RelativeLayout>

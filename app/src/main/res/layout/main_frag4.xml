@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:id="@+id/frag4_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:dividerHeight="1px"
+        android:divider="@color/Gray"
+        android:scrollbars="@null"
+        android:layout_alignParentTop="true" >
+    </ListView>
+    
+    <include layout="@layout/include_nodata"
+        android:layout_width="wrap_content"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+/>        
+    <ProgressBar 
+        style="@style/mProgress_circle"
+        android:id="@+id/frag4_pb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

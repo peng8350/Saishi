@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+        <RelativeLayout
+        android:id="@+id/Help_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Help_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="反馈与帮助"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+    </RelativeLayout>
+
+    <com.peng.saishi.widget.pagertab.PagerSlidingTabStrip
+        android:id="@+id/Help_pagerSliding"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/Help_Top"
+        android:layout_gravity="top"
+        android:background="#ffffff"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textColor="#000" >
+    </com.peng.saishi.widget.pagertab.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Help_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Help_pagerSliding" />
+
+</RelativeLayout>

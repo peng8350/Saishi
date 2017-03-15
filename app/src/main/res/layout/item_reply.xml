@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/item_reply_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="用户明"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/item_reply_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_reply_textView1"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/item_reply_textView1"
+        android:text="这是一场不错的比赛这是一场不错的比赛这是一场不错的比赛这是一场不错的比赛"
+        android:textColor="#000"
+        android:layout_marginRight="100dp"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/item_reply_TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_reply_textView2"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:text="6-15 5:30"
+        android:textColor="#878686"
+        android:textSize="@dimen/Small_Text" />
+
+</RelativeLayout>

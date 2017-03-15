@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Match_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Match_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="个人资料"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/persondata_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:text="完成"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:textSize="@dimen/middle_text" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Match_Top"
+        android:scrollbars="@null"
+        android:background="#eaeaea" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="姓名"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/textView1"
+                    android:layout_alignBottom="@+id/textView1"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="在读院校"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="中山大学"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="在读专业"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_xueli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+                
+            </RelativeLayout>
+<RelativeLayout
+                android:id="@+id/persondata_layout10"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="联系方式"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="15015715140"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+                
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/persondata_layout4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="年龄"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="性别"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="学历"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout7"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="地区"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="小明"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout8"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="自我介绍"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="自我介绍自我...."
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/persondata_layout9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lv_bg"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="专长"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="喜欢打游戏,爱好编程"
+                    android:textColor="#8e8e8e"
+                    android:textSize="@dimen/Small_Text" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

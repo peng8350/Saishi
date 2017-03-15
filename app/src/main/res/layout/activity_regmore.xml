@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9" >
+
+    <RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="完善资料"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/RegMore_rectImageVIew1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/Setting_Top"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        fresco:fadeDuration = "100"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImageScaleType="centerInside"
+        fresco:roundAsCircle="true" />
+
+    <EditText
+        android:id="@+id/Regmore_editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/RegMore_rectImageVIew1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/reg_et_bg"
+        android:maxLength="12"
+        android:drawableLeft="@drawable/name"
+        android:ems="10"
+        android:hint="用户的姓名"
+        android:padding="10dp"
+        android:textSize="@dimen/normal_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/Regmore_button1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/Reg_editText1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_loginbtn_bg"
+        android:text="完成"
+        android:textColor="#fff"
+        android:textSize="@dimen/middle_text" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Regmore_editText1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/Regmore_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Regmore_editText1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="性别:"
+            android:textColor="#fff"
+            android:textSize="@dimen/middle_text" />
+
+        <RadioGroup
+            android:id="@+id/Regmore_radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio0"
+                style="@style/MyRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="男"
+                android:textColor="#fff"
+                android:textSize="@dimen/middle_text" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                style="@style/MyRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="女"
+                android:textColor="#fff"
+                android:textSize="@dimen/middle_text" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/RegMore_editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/linearLayout1"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="请输入你的自我介绍"
+        android:maxLength="150"
+        android:minHeight="100dp"
+        android:textColor="#878686"
+        android:textSize="@dimen/normal_text" />
+
+</RelativeLayout>

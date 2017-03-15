@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/frag1_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:background="@drawable/lv_bg"
+            android:clickable="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/frag1_bottom_tv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:drawableLeft="@drawable/mainfrag1_badge1"
+                android:drawableRight="@drawable/forward"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/Oriange" />
+
+            <com.peng.saishi.widget.HorizontalListView
+                android:id="@+id/frag1_horlistview"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:focusable="true" />
+        </LinearLayout>

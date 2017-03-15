@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/Chat_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:text="组队历史"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <ImageView
+            android:id="@+id/Chat_imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/chat_btn" />
+
+        <ProgressBar
+            android:id="@+id/Chat_bar"
+            style="@style/mProgress_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/Chat_title"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@drawable/chat_bg_01" >
+
+        <com.peng.saishi.widget.pulltorefesh.PullToRefreshExpandableListView
+            android:id="@+id/Chat_listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:childDivider="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="15dp"
+            android:groupIndicator="@null"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="@null"
+            android:transcriptMode="normal" />
+
+        <!-- 录音显示UI层 -->
+
+        <FrameLayout
+            android:id="@+id/rcChat_popup"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                layout="@layout/layout_microphone" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_chatmain_input"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottombar_bg"
+        android:gravity="center_vertical" >
+
+        <!--
+             <ImageButton
+            android:id="@+id/more_btn"
+            android:layout_width="42.0dip"
+            android:layout_height="fill_parent"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10.0dip"
+            android:src="@drawable/pop_btn_selector" />
+        -->
+        <!-- 文字按钮 -->
+
+        <ImageButton
+            android:id="@+id/ib_chatmain_msg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/chat_setmode_voice_selector" />
+
+        <ImageButton
+            android:id="@+id/face_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/pop_btn_face_selector" />
+
+        <com.peng.saishi.widget.emojicon.EmojiconEditText
+            android:id="@+id/msg_et"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6.0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="6.0dip"
+            android:layout_weight="1.23"
+            android:background="@drawable/chat_bottombar_input"
+            android:imeOptions="actionSend"
+            android:singleLine="true"
+            android:paddingBottom="4.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="14.0dip"
+            android:paddingTop="4.0dip"
+            android:textSize="16.0sp" />
+
+        <RelativeLayout
+            android:id="@+id/send_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="left|center"
+            android:clickable="true"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:id="@+id/send_btn"
+                android:layout_width="42.0dip"
+                android:layout_height="34.0dip"
+                android:layout_marginLeft="4.0dip"
+                android:background="@drawable/chat_bottombar_btn_selector"
+                android:shadowColor="#ff568ab5"
+                android:shadowDx="0.0"
+                android:shadowDy="-1.0"
+                android:shadowRadius="0.2"
+                android:text="发送"
+                android:textColor="#fff"
+                android:textSize="14.0sp"
+                android:visibility="gone" />
+            <!-- 附件 -->
+
+            <Button
+                android:id="@+id/btn_chat_affix"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/zf_show_add_photo_btn"
+                android:shadowColor="#ff568ab5"
+                android:shadowDx="0.0"
+                android:shadowDy="-1.0"
+                android:shadowRadius="0.2"
+                android:textColor="#fff"
+                android:textSize="14.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 语音输入框 -->
+
+    <LinearLayout
+        android:id="@+id/ll_chatmain_voice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottombar_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <ImageButton
+            android:id="@+id/ib_chatmain_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_setmode_msg_selector" />
+
+        <TextView
+            android:id="@+id/tv_chatmain_press_voice"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/ivPopUp"
+            android:background="@drawable/chat_press_voice_select"
+            android:gravity="center"
+            android:text="按住说话" />
+    </LinearLayout>
+
+    <!-- 拍照和相册 -->
+
+
+    <!-- 拍照和相册 -->
+<HorizontalScrollView
+      android:id="@+id/ll_chatmain_affix"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     android:background="@drawable/bottombar_bg"
+     android:visibility="gone"
+    >
+    <LinearLayout
+      
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:orientation="horizontal"
+        android:gravity="center"
+      
+        >
+
+        <TextView
+            android:id="@+id/tv_chatmain_affix_take_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/zf_take_camera_btn_bg"
+            android:gravity="center_horizontal"
+            android:text="拍照"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_chatmain_affix_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/zf_take_photo_btn_bg"
+            android:gravity="center_horizontal"
+            android:text="相册"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tv_chatmain_affix_micophone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/micophone"
+            android:gravity="center_horizontal"
+            android:text="语音录入"
+            android:textColor="#000000" />
+                <TextView
+            android:id="@+id/tv_chatmain_affix_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/location"
+            android:gravity="center_horizontal"
+            android:text="发送位置"
+            android:textColor="#000000" />
+                        <TextView
+            android:id="@+id/tv_chatmain_affix_folder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/folder"
+            android:gravity="center_horizontal"
+            android:text="发送文件"
+            android:textColor="#000000" />
+    </LinearLayout>
+    </HorizontalScrollView>
+    <!-- 表情 begin -->
+
+
+    <!-- 表情页viewpager -->
+
+    <FrameLayout
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone" />
+    <!-- 表情 end -->
+
+</LinearLayout>

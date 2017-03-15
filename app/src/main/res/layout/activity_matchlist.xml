@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/MatchList_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/MatchList_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="asd"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <ImageView
+            android:id="@+id/MatchList_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+  android:padding="10dp"
+            android:src="@drawable/search2" />
+    </RelativeLayout>
+
+    <com.peng.saishi.widget.pagertab.PagerSlidingTabStrip
+        android:id="@+id/MatchList_pagerSliding"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/MatchList_Top"
+        android:layout_gravity="top"
+        android:background="#ffffff"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:textColor="#000" >
+    </com.peng.saishi.widget.pagertab.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Matchlist_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/MatchList_pagerSliding" />
+
+</RelativeLayout>

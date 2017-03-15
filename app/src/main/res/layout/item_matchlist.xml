@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card"
+        android:descendantFocusability="afterDescendants"
+        android:padding="10dp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="100"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/loading2"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:progressBarAutoRotateInterval="2500"
+            fresco:progressBarImage="@drawable/loading"
+            fresco:progressBarImageScaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:lines="2"
+            android:text=""
+            android:textColor="#696a98" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_alignLeft="@+id/textView1"
+            android:lines="1"
+            android:text="2016-3-16截止   广东佛山"
+            android:textColor="#a2a2a2"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/Seeperson_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView4"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_marginRight="50dp"
+            android:text="主办单位"
+            android:singleLine="true"
+            android:textColor="#a2a2a2"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/Seeperson_xueli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="right"
+            android:singleLine="true"
+            android:text="8.8"
+            android:textColor="#e34221"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+</FrameLayout>

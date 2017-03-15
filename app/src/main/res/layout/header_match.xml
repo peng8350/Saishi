@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+ >
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/header_match_imageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/pic5"
+        fresco:actualImageScaleType="centerCrop"
+        android:layout_margin="5dp"
+        fresco:fadeDuration="100"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/loading1"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:progressBarImage="@drawable/loading"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:roundedCornerRadius="10dp" />
+
+    <RatingBar
+        android:id="@+id/header_match_ratingBar1"
+        style="@style/roomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_match_textView1"
+        android:layout_below="@+id/header_match_textView1"
+        android:layout_marginTop="3dp"
+        android:isIndicator="true"
+        android:max="100"
+        android:numStars="5"
+        android:progress="100" />
+
+    <TextView
+        android:id="@+id/header_match_textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/header_match_imageView1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/header_match_badgeView1"
+        android:layout_toRightOf="@+id/header_match_imageView1"
+        android:text="移动互联网开发"
+        android:textColor="#000"
+        android:textSize="@dimen/middle_text" />
+
+    <TextView
+        android:id="@+id/header_match_textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/header_match_ratingBar1"
+        android:layout_toRightOf="@+id/header_match_ratingBar1"
+        android:text="(8.8分)"
+        android:textColor="#878686"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/header_match_textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_match_ratingBar1"
+        android:layout_below="@+id/header_match_textView2"
+        android:layout_marginTop="3dp"
+        android:text="IT开发  |  编程开发类"
+        android:textColor="#85accf"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/header_match_textView6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header_match_textView5"
+        android:layout_marginTop="3dp"
+        android:background="@color/Gray" />
+
+    <Button
+        android:id="@+id/header_match_button2"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/header_match_textView6"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_collect"
+        android:text="收藏"
+        android:textColor="#fff"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/header_match_textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_match_textView3"
+        android:layout_below="@+id/header_match_textView3"
+        android:text="时间:2016-05-16\n地点:亚洲\n已经有1300人报名"
+        android:textColor="#878686"
+        android:textSize="@dimen/Small_Text" />
+
+    <Button
+        android:id="@+id/header_match_button1"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/header_match_button2"
+        android:layout_alignBottom="@+id/header_match_button2"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/header_match_button2"
+        android:background="@drawable/btn_apply"
+        android:text="网申地址"
+        android:textColor="#fff"
+        android:textSize="@dimen/normal_text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/item_match_textView3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/header_match_textView10"
+            android:layout_below="@+id/header_match_textView10"
+            android:layout_marginTop="7dp"
+            android:background="@color/Gray" />
+
+        <TextView
+            android:id="@+id/header_match_textView10"
+            android:layout_width="5dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#325d9b" />
+
+        <com.peng.saishi.widget.HorizontalListView
+            android:id="@+id/header_match_horizontallistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/item_match_textView3"
+            android:layout_below="@+id/item_match_textView3"
+            android:minHeight="140dp"
+            android:layout_marginTop="5dp"
+            android:scrollbars="@null" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/include_nodata"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/header_match_progress"
+            style="@style/mProgress_circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/item_match_textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/item_match_textView3"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/header_match_textView10"
+            android:text="赛事新闻"
+            android:textColor="#000"
+            android:textSize="@dimen/middle_text" />
+
+    </RelativeLayout>
+
+    <com.peng.saishi.widget.BadgeView
+        android:id="@+id/header_match_badgeView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/header_match_textView1"
+        android:layout_margin="3dp"
+        android:text="报名中"
+        android:textSize="@dimen/Small_Text" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#eaeaea"
+        android:layout_below="@+id/header_match_button1"
+        />
+
+</RelativeLayout>

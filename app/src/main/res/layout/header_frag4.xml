@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/header_frag4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="8dp"
+        android:textSize="@dimen/middle_text"
+        android:background="#9FCF9E"
+        android:drawableLeft="@drawable/error"
+        android:drawableRight="@drawable/forward2"
+        android:gravity="left|center_vertical"
+        android:drawablePadding="10dp"
+        android:text="没有可用的网络哦" />
+
+</RelativeLayout>

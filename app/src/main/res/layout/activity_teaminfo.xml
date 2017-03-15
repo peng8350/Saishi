@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/Match_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Match_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="队伍详细"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <ImageButton
+            android:id="@+id/Teaminfo_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/menu" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Match_Top"
+        android:background="#eaeaea"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/teaminfo_top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blur_bg2" >
+
+                <TextView
+                    android:id="@+id/teaminfo_headertv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/teaminfo_headertv1"
+                    android:layout_marginLeft="15dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/goal"
+                    android:gravity="center_vertical"
+                    android:text="全国移动互联网大赛"
+                    android:textColor="@drawable/back_text"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_headertv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignLeft="@+id/teaminfo_headertv2"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/teaminfo_imageview1"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="来来来"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_headertv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/teaminfo_headertv2"
+                    android:layout_below="@+id/teaminfo_headertv2"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="比赛时间:2016-05-12"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/normal_text" />
+
+                <com.peng.saishi.widget.TagCloudView
+                    android:id="@+id/teaminfo_tagcloudview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/teaminfo_headertv3"
+                    app:tcvBorder="8dp"
+                    app:tcvCanTagClick="true"
+                    app:tcvItemBorderHorizontal="8dp"
+                    app:tcvItemBorderVertical="6dp"
+                    app:tcvTextColor="#123455" />
+
+                <ImageView
+                    android:id="@+id/teaminfo_imageview2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/teaminfo_imageview1"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/qrcode"
+                    android:scaleType="fitXY" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/teaminfo_imageview1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="28dp"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:fadeDuration="100"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:placeholderImage="@drawable/loadinggroup"
+                    fresco:placeholderImageScaleType="centerCrop"
+                    fresco:progressBarAutoRotateInterval="2500"
+                    fresco:progressBarImage="@drawable/loading"
+                    fresco:progressBarImageScaleType="centerInside"
+                    fresco:retryImage="@drawable/retry"
+                    fresco:retryImageScaleType="centerCrop"
+                    fresco:roundedCornerRadius="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="群介绍"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍"
+                    android:textColor="#b1b1b1"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teaminfo_showperson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/lv_bg"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:drawableRight="@drawable/forward"
+                    android:gravity="center_vertical"
+                    android:text="队成员"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <com.peng.saishi.widget.HorizontalListView
+                    android:id="@+id/teaminfo_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:clickable="false"
+                    
+                    app:dividerWidth="20dp" >
+                </com.peng.saishi.widget.HorizontalListView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="入队要求"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_tv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍"
+                    android:textColor="#b1b1b1"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="队伍计划"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_tv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍"
+                    android:textColor="#b1b1b1"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="比赛目标"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/teaminfo_tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:text="群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍群介绍"
+                    android:textColor="#b1b1b1"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

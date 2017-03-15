@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg2"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/imageView1"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/loading1"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:progressBarImage="@drawable/loading"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:roundedCornerRadius="3dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:singleLine="true"
+        android:text="全国以东湖联网"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/normal_text" />
+
+</LinearLayout>

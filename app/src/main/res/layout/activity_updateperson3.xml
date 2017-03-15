@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea" >
+
+    <RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="修改资料"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/updateperson3_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/normal_text"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:layout_alignParentTop="true"
+            android:text="确定" />
+
+    </RelativeLayout>
+
+        <EditText
+            android:id="@+id/updateperson3_editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Setting_Top"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/update_et_bg"
+            android:minHeight="100dp"
+            android:text="asdasdasd"
+            android:gravity="left|top"
+            android:textColor="#878686"
+            android:textSize="@dimen/normal_text" />
+
+</RelativeLayout>

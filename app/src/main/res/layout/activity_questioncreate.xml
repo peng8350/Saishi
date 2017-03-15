@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9" >
+
+    <RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新问题"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/QuesCreate_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textColor="#fff"
+
+            android:text="发表" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/QuesCreate_editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Setting_Top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/reg_et_bg"
+        android:maxLength="45"
+        android:ems="10"
+        android:hint="请输入问题的标题"
+        android:padding="10dp"
+        android:minHeight="50dp"
+        android:textSize="@dimen/normal_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/QuesCreate_editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/QuesCreate_editText1"
+        android:layout_alignRight="@+id/QuesCreate_editText1"
+        android:layout_below="@+id/QuesCreate_editText1"
+        android:background="@drawable/reg_et_bg"
+        android:ems="10"
+        android:gravity="left|top"
+        android:layout_marginTop="10dp"
+        android:hint="请输入问题的详细描述.."
+        android:minHeight="120dp"
+        android:maxLength="250"
+        android:padding="10dp"
+        android:textSize="@dimen/normal_text" />
+
+</RelativeLayout>

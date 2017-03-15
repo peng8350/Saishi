@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:clickable="true"
+    android:padding="5dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/Seeperson_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:failureImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/loadinggroup"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:progressBarAutoRotateInterval="2500"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="11dp"
+        android:layout_toRightOf="@+id/Seeperson_head"
+        android:text="小哇而"
+        android:textColor="#f00"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/Seeperson_intro"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/textView1"
+        android:gravity="bottom"
+        android:text="这里欢迎很多专业一起去比赛,拿到好成绩,热烈欢迎各路的大神"
+        android:textColor="@color/deep_grey"
+        android:textSize="@dimen/Small_Text" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:src="@drawable/forward" />
+
+</RelativeLayout>

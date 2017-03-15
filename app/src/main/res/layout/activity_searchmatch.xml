@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea" >
+
+    <LinearLayout
+        android:id="@+id/search_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#fff"
+        android:padding="5dp" >
+
+        <EditText
+            android:id="@+id/search_editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/search_et"
+            android:drawableLeft="@drawable/search"
+            android:ems="10"
+            android:hint="请输入搜索的内容"
+            android:padding="5dp"
+            android:textSize="@dimen/normal_text" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/search_textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:padding="3dp"
+            android:text="搜索"
+            android:textColor="#3193e3"
+            android:textSize="@dimen/middle_text" />
+    </LinearLayout>
+
+    <com.peng.saishi.widget.TagCloudView
+        android:id="@+id/search_tagcloudview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_top"
+        app:tcvBackground="@drawable/background_tag_selector"
+        app:tcvBorder="8dp"
+        app:tcvCanTagClick="true"
+        app:tcvItemBorderHorizontal="8dp"
+        app:tcvItemBorderVertical="6dp"
+        app:tcvTextColor="#123455" />
+
+    <ListView
+        android:id="@+id/search_listView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/search_top"
+        android:background="#faf9f9"
+        android:divider="#d1d1d1"
+        android:dividerHeight="0px"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="@null" >
+    </ListView>
+	<include layout="@layout/include_nodata"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerInParent="true"
+	    android:visibility="gone"
+	    />
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="@null" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.peng.saishi.widget.autoviewpager.AutoScrollViewPager
+            android:id="@+id/main_frag1_autoviewpager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" >
+        </com.peng.saishi.widget.autoviewpager.AutoScrollViewPager>
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/main_frag1_autoviewpager"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/frag1_pagertitle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/blackwhite"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:id="@+id/frag1_middle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_frag1_autoviewpager"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/main_frag1_autoviewpager"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/frag1_middle1"
+                    layout="@layout/include_frag1middle" >
+                </include>
+
+                <include
+                    android:id="@+id/frag1_middle2"
+                    layout="@layout/include_frag1middle" >
+                </include>
+
+                <include
+                    android:id="@+id/frag1_middle3"
+                    layout="@layout/include_frag1middle" >
+                </include>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="horizontal" >
+
+                <include
+                    android:id="@+id/frag1_middle4"
+                    layout="@layout/include_frag1middle" >
+                </include>
+
+                <include
+                    android:id="@+id/frag1_middle5"
+                    layout="@layout/include_frag1middle" >
+                </include>
+
+                <include
+                    android:id="@+id/frag1_middle6"
+                    layout="@layout/include_frag1middle" >
+                </include>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frag1_middle"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/frag1_bottom1"
+                layout="@layout/include_frag1bottom" />
+
+            <include
+                android:id="@+id/frag1_bottom2"
+                layout="@layout/include_frag1bottom" />
+
+            <include
+                android:id="@+id/frag1_bottom3"
+                layout="@layout/include_frag1bottom" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/lv_bg"
+    android:padding="10dp"
+    android:gravity="center_vertical"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+     />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textColor="#999999"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/imageView1"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="14dp"
+        android:src="@drawable/forward" />
+
+    <com.peng.saishi.widget.BadgeView
+        android:id="@+id/badgeView1"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textSize="@dimen/normal_text"
+        android:text="12" />
+
+</RelativeLayout>

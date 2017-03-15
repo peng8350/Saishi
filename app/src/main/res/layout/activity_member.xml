@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout
+        android:id="@+id/Member_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+        <TextView
+            android:id="@+id/Member_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群成员"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include
+            layout="@layout/view_back" />
+<Button
+            android:id="@+id/member_Btn"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#fff"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:text="移除"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+<GridView
+    android:id="@+id/Member_gridView1"
+    android:scrollbars="@null"
+    android:numColumns="3"
+    android:padding="10dp"
+    android:horizontalSpacing="15dp"
+    android:background="#fff"
+    android:verticalSpacing="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:listSelector="@android:color/transparent"
+    android:layout_below="@+id/Member_Top"
+ >
+</GridView>
+
+</RelativeLayout>

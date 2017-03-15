@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/item_joingroupback_layout"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center|right" >
+
+        <Button
+            android:id="@+id/item_joingroupback_btn1"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ff0000"
+            android:text="删除"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_joingroup_font"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:clickable="true"
+        android:paddingTop="10dp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/item_joingroup_riv"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="100"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/loadinggroup"
+            fresco:placeholderImageScaleType="centerCrop"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/item_joingroup_t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_joingroup_riv"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/item_joingroup_t3"
+            android:layout_toRightOf="@+id/item_joingroup_riv"
+            android:singleLine="true"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="@dimen/middle_text" />
+
+        <TextView
+            android:id="@+id/item_joingroup_t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/item_joingroup_riv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@+id/item_joingroup_riv"
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textColor="#c1c1c1"
+            android:textSize="@dimen/normal_text" />
+
+        <Button
+            android:id="@+id/item_joingroup_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_joingroup_riv"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:background="#f00"
+            android:padding="5dp"
+            android:text="拒绝"
+            android:textColor="#fff"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/item_joingroup_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/item_joingroup_riv"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/item_joingroup_btn1"
+            android:background="@color/Dgreen"
+            android:padding="5dp"
+            android:text="接受"
+            android:textColor="#fff"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/item_joingroup_t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/item_joingroup_t1"
+            
+            android:singleLine="true"
+            android:text="Large Text"
+            android:textColor="#c1c1c1"
+            android:textSize="@dimen/normal_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

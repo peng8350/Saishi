@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/lv_bg"
+    android:clickable="true"
+    android:padding="5dp"
+    android:gravity="center_vertical"
+
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/item_setting_textView1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:drawablePadding="5dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/deep_grey"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/middle_text"
+        android:text="TextView" />
+
+</RelativeLayout>

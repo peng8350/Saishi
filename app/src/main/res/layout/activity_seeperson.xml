@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f1f1f1"
+        android:scrollbars="@null" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f1f1f1"
+            android:paddingBottom="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/seeperson_top"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/person_bg" >
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Seeperson_middle"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/seeperson_top"
+                android:background="#f1f1f1"
+                android:paddingBottom="10dp" >
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="19dp"
+                    android:drawableLeft="@drawable/male"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:text="男"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sex"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="36dp"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:text="20岁"
+                    android:textColor="#000"
+                    android:textSize="@dimen/big_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/sex"
+                    android:layout_alignRight="@+id/Seeperson_age"
+                    android:layout_below="@+id/Seeperson_name"
+                    android:layout_marginTop="43dp"
+                    android:gravity="center_horizontal"
+                    android:text="这是一个自我介绍这是一个自我介绍这是一个自我介绍这是一个自我介绍这是一个自我介绍这是一个自我介绍"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/Seeperson_name"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="40dp"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:text="20岁"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Seeperson_middle"
+                android:layout_margin="10dp"
+                android:background="@drawable/update_et_bg"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/Seeperson_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="用户帐号 \t中山大学"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="在读学校 \t中山大学"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="在读专业: \t计算机与软件"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_xueli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="学历: \t博士学历"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_place"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="地区: \t广东省 佛山市 顺德区"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="专长: \t打游戏写代码"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="49dp"
+                    android:padding="10dp"
+                    android:text="联系方式: \t15015715140"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+            </LinearLayout>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/Seeperson_head"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="180dp"
+                android:src="@drawable/pic1"
+                      fresco:fadeDuration = "100"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/loadinguser"
+                fresco:placeholderImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/WHite"
+                fresco:roundingBorderWidth="1dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/publish_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent" >
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/Seeperson_update"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:padding="5dp"
+            android:text="修改资料"
+            android:textColor="#fff"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+</RelativeLayout>

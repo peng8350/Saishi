@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d9d9d9" >
+
+    <RelativeLayout
+        android:id="@+id/Setting_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="忘记密码"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/Forget1_editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Setting_Top"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/reg_et_bg"
+        android:drawableLeft="@drawable/phone_android"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="请输入你忘记密码的手机号"
+        android:padding="10dp"
+        android:textSize="@dimen/normal_text" >
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Forget1_editText1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/Forget1_editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Setting_Top"
+            android:layout_weight="3"
+            android:background="@drawable/reg_et_bg"
+            android:ems="10"
+            android:hint="短信验证码"
+            android:padding="10dp"
+            android:textSize="@dimen/normal_text" />
+
+        <Button
+            android:id="@+id/Forget1_button1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/reg_btn"
+            android:textSize="@dimen/normal_text"
+            android:text="发送验证码"
+            android:layout_marginLeft="30dp"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Forget1_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:textSize="@dimen/middle_text"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:inputType="number"
+        android:textColor="#fff"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/login_loginbtn_bg"
+        android:text="下一步" />
+
+</RelativeLayout>

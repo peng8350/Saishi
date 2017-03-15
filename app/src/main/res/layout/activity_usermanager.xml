@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<RelativeLayout
+        android:id="@+id/usermanager_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+        <TextView
+            android:id="@+id/usermanager_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="账号管理"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include
+            layout="@layout/view_back" />
+
+    </RelativeLayout>
+
+<ListView
+    android:id="@+id/usermanager_listview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:divider="#eaeaea"
+    android:listSelector="@android:color/transparent"
+    android:dividerHeight="1px"
+    android:scrollbars="@null"
+    android:layout_alignParentLeft="true"
+    android:layout_below="@+id/usermanager_Top" >
+</ListView>
+    <LinearLayout
+    android:id="@+id/usermanager_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:background="#fff"
+    android:padding="4dp" >
+
+    <Button
+        android:id="@+id/usermanager_Exit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_loginbtn_bg"
+        android:text="退出当前账号"
+        android:textColor="#fff"
+        android:textSize="@dimen/middle_text" />
+
+</LinearLayout>
+
+</RelativeLayout>

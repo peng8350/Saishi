@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/iv_user_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:placeholderImage="@drawable/loadinguser"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/iv_user_image"
+        android:text="名字"
+        android:textColor="#878686"
+        android:textSize="13dp" />
+
+    <RelativeLayout
+        android:id="@+id/t"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_toRightOf="@id/iv_user_image"
+        android:background="@drawable/balloon_l_selector"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:clickable="true" >
+
+     <TextView
+            android:id="@+id/item_chat_filename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_alignRight="@+id/item_chat_filestate"
+            android:lines="2"
+            android:textColor="#000"
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/file" />
+
+        <com.peng.saishi.widget.numberprogressbar.NumberProgressBar
+            android:id="@+id/item_chat_progress"
+            style="@style/NumberProgressBar_Passing_Green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="15dp"
+            android:layout_alignRight="@+id/item_chat_filestate"
+ />
+
+        <TextView
+            android:id="@+id/item_chat_filesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_toRightOf="@+id/imageView1"
+            android:textSize="@dimen/normal_text"
+            android:textColor="#adadad"
+            android:text="2.34M" />
+
+        <TextView
+            android:id="@+id/item_chat_filestate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item_chat_filesize"
+            android:layout_alignBottom="@+id/item_chat_filesize"
+            android:layout_toRightOf="@+id/item_chat_filesize"
+            android:padding="5dp"
+            android:layout_marginLeft="30dp"
+            android:text="接收"
+            android:textColor="#35A57C"
+            android:textSize="@dimen/middle_text" />
+
+        <Button
+            android:id="@+id/item_chat_cancel"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/item_chat_progress"
+            android:layout_alignRight="@id/item_chat_filestate"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:textSize="@dimen/middle_text"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:textColor="#35A57C"
+            android:text="取消" />
+
+ </RelativeLayout>
+
+</RelativeLayout>

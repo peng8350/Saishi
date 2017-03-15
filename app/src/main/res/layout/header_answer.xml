@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lv_bg"
+    android:padding="10dp" >
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/header_answer_head"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:placeholderImage="@drawable/loadinguser"
+        fresco:placeholderImageScaleType="centerCrop"
+         fresco:progressBarAutoRotateInterval="2500"
+        fresco:progressBarImage="@drawable/loadinguser"
+        fresco:progressBarImageScaleType="centerInside"
+      />
+
+    <TextView
+        android:id="@+id/header_answer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/header_answer_head"
+        android:layout_toRightOf="@+id/header_answer_head"
+        android:textSize="@dimen/middle_text"
+        android:textColor="#C37279"
+        android:layout_marginLeft="15dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/header_answer_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_answer_name"
+        android:layout_below="@+id/header_answer_name"
+        android:text="TextView"
+        android:textColor="#adadad"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/normal_text" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignLeft="@+id/header_answer_head"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/header_answer_descriable"
+        android:layout_marginTop="10dp"
+        android:background="#eaeaea"
+        />
+
+    <TextView
+        android:id="@+id/header_answer_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_answer_head"
+        android:layout_alignRight="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:minHeight="75dp"
+        android:textColor="#707A97"
+        android:textSize="@dimen/normal_text"
+        android:layout_marginTop="24dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/header_answer_descriable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/header_answer_time"
+        android:layout_below="@id/header_answer_time"
+        android:drawableLeft="@drawable/visible"
+        android:gravity="center_vertical"
+        android:text="13人浏览   9人回复"
+        android:layout_marginTop="5dp"
+        android:textColor="#adadad"
+        android:textSize="@dimen/Small_Text" />
+
+</RelativeLayout>

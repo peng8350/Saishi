@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/History_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/History_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="新闻"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <ImageButton
+            android:id="@+id/News_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/redo"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/History_Top"
+        android:scrollbars="@null" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/News_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:text="我是以个阿斯顿撒阿三打"
+                android:textColor="@color/Dgreen"
+                android:textSize="@dimen/middle_text" />
+
+            <TextView
+                android:id="@+id/News_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/News_title"
+                android:padding="5dp"
+                android:text="时间:2016年8月20日"
+                android:textColor="@color/Dgreen"
+                android:textSize="@dimen/normal_text" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/News_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/News_time"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="100"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/loading1"
+                fresco:placeholderImageScaleType="centerCrop"
+                android:padding="5dp"
+                fresco:progressBarAutoRotateInterval="2500"
+                fresco:progressBarImage="@drawable/loading"
+                fresco:progressBarImageScaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/News_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/News_image"
+                android:padding="5dp"
+                android:text="时间:2016年8月20日"
+                android:textColor="#adadad"
+                android:textSize="@dimen/normal_text" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

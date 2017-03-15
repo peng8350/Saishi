@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00f" >
+
+    <RelativeLayout
+        android:id="@+id/Main_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/Main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Main_Tab1"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <ImageButton
+            android:id="@+id/Login_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/menu" />
+
+        <com.peng.saishi.widget.SegmentView
+            android:id="@+id/main_segmentView1"
+            android:layout_width="130dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" >
+        </com.peng.saishi.widget.SegmentView>
+
+        <ImageButton
+            android:id="@+id/ImageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/appointment" />
+
+        <com.peng.saishi.widget.BadgeView
+            android:id="@+id/main_topbadge"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text=" "
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/normal_text"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.jpeng.jptabbar.JPTabBar
+        android:id="@+id/Main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tab_bg"
+        android:orientation="horizontal"
+        app:TabAnimate="Scale"
+        app:TabIconSize="32dp"
+        >
+
+
+    </com.jpeng.jptabbar.JPTabBar>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/Main_Middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/Main_bottom"
+        android:layout_below="@id/Main_Top"
+        android:background="@color/Gray" >
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

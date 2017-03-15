@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/UpdateTeam_Top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_main_top" >
+
+        <TextView
+            android:id="@+id/UpdateTeam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="群成员"
+            android:textColor="@color/WHite"
+            android:textSize="@dimen/big_text" />
+
+        <include layout="@layout/view_back" />
+
+        <Button
+            android:id="@+id/UpdateTeam_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:enabled="false"
+            android:padding="10dp"
+            android:text="提交"
+            android:textColor="@drawable/enable_color"
+            android:textSize="@dimen/middle_text" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/UpdateTeam_Top"
+        android:scrollbars="@null" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#e1e1e1"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="队的头像"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/UpdateTeam_rectImageVIew1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="20dp"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:fadeDuration="100"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:roundAsCircle="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <Button
+                    android:id="@+id/UpdateTeam_plus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/minus_50"
+                    android:gravity="center" />
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/UpdateTeam_plus"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:text="2"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/UpdateTeam_add"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/UpdateTeam_editText6"
+                    android:background="@drawable/plus_50"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="队的人数"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入你队的名字.....(必填)"
+                    android:maxLength="12"
+                    android:minHeight="50dp"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="队的名字"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/Seeperson_xueli"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入你队的简介.....(必填)"
+                    android:maxLength="200"
+                    android:minHeight="100dp"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_xueli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="队的简介"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/Seeperson_intro"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入你的入队要求.....(选填)"
+                    android:maxLength="100"
+                    android:minHeight="100dp"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_intro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="入队要求"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/textView4"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入你的队伍计划.....(必填,大于5个字符)"
+                    android:maxLength="250"
+                    android:minHeight="100dp"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="队伍计划"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/UpdateTeam_editText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/Seeperson_hobby"
+                    android:background="@drawable/reg_et_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入你的比赛目标.....(选填)"
+                    android:maxLength="100"
+                    android:minHeight="100dp"
+                    android:textColor="#878686"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/Seeperson_hobby"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="比赛目标"
+                    android:textColor="#000"
+                    android:textSize="@dimen/middle_text" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

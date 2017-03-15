@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
+    android:paddingBottom="5dp" >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_answer_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:fadeDuration="100"
+        fresco:placeholderImage="@drawable/loadinguser"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="#adadad"
+        fresco:roundingBorderWidth="2dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/item_answer_head"
+        android:background="@drawable/balloon_l_selector"
+        android:minHeight="120dp"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/item_answer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textColor="#77ff0000"
+            android:textSize="@dimen/middle_text" />
+
+        <TextView
+            android:id="@+id/item_answer_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_answer_name"
+            android:layout_below="@id/item_answer_name"
+            android:layout_marginTop="5dp"
+            android:text="TextView"
+            android:textColor="#eaeaea"
+            android:textSize="@dimen/Small_Text" />
+
+        <TextView
+            android:id="@+id/item_answer_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/item_answer_name"
+            android:layout_below="@+id/item_answer_time"
+            android:layout_marginTop="15dp"
+            android:text="TextView"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text" />
+    </RelativeLayout>
+
+</RelativeLayout>
