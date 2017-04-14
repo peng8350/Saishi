@@ -179,20 +179,42 @@ public class Main_frag1 extends LazyFragment implements OnPageChangeListener,
 				(List<MatchInfo>) GlobeScopeUtils.getMatches(), 2);
 		list3 = MatchUtils.getPart2Match15Limit(
 				(List<MatchInfo>) GlobeScopeUtils.getMatches(), 3);
-		if (list1 != null && list1.size() > 1) {
-			piclist.add(list1.get(1));
-			piclist.add(list1.get(0));
+		if (list1 != null&&list1.size()!=0 ) {
+			if(list1.size()==2) {
+				piclist.add(list1.get(1));
+				piclist.add(list1.get(0));
+			}
+			else{
+				piclist.add(list1.get(0));
+			}
 		}
-		if (list2 != null && list2.size() > 1) {
-			piclist.add(list2.get(0));
-			piclist.add(list2.get(1));
-			piclist.add(list2.get(2));
+		if (list2 != null &&list2.size()!=0) {
+			if(list2.size()==3) {
+				piclist.add(list2.get(0));
+				piclist.add(list2.get(1));
+				piclist.add(list2.get(2));
+			}
+			else if(list2.size()==2){
+				piclist.add(list2.get(0));
+				piclist.add(list2.get(1));
+			}
+			else{
+				piclist.add(list2.get(0));
+			}
 		}
-		if (list3 != null && list3.size() > 1) {
-
-			piclist.add(list3.get(0));
-			piclist.add(list3.get(1));
-			piclist.add(list3.get(2));
+		if (list3 != null &&list3.size()!=0) {
+			if(list3.size()==3) {
+				piclist.add(list3.get(0));
+				piclist.add(list3.get(1));
+				piclist.add(list3.get(2));
+			}
+			else if(list3.size()==2){
+				piclist.add(list3.get(0));
+				piclist.add(list3.get(1));
+			}
+			else{
+				piclist.add(list3.get(0));
+			}
 		}
 		bottom_lv1.setAdapter(new MainFrag1bottomAdapter(getActivity(), list1));
 

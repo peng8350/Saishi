@@ -1,20 +1,17 @@
 package com.peng.saishi.manager;
 
-import java.io.File;
-import java.util.Map;
-
-import okhttp3.Call;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.util.Log;
-
 import com.peng.saishi.entity.config.AppConfig;
 import com.peng.saishi.interfaces.observer.UserRegListener;
 import com.peng.saishi.interfaces.service.MyStringCallBack;
 import com.peng.saishi.utils.ToastUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
+import okhttp3.Call;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.File;
+import java.util.Map;
 
 /**
  * 用户的管理者

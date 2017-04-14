@@ -306,11 +306,6 @@
             
             android:screenOrientation="portrait" >
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- 注册界面 -->
         <activity
@@ -323,6 +318,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/LoginStyle" >
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <!-- 退出的广播 -->

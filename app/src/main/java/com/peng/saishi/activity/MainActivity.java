@@ -77,7 +77,6 @@ public class MainActivity extends BaseMainActivity implements
 
 		onSegmentViewClickListener, BadgeListener, OnDismissListener,
 		AlarmListener, AMapLocationListener,OnTabSelectListener {
-
 	public static final int Addgroup_requst = 10001;
 	private ViewPager pager;
 	private JPTabBar mBar;
@@ -116,6 +115,7 @@ public class MainActivity extends BaseMainActivity implements
 		// TODO Auto-generated method stub
 		// 声明AMapLocationClient类对象
 		// 初始化定位
+
 		mLocationClient = new AMapLocationClient(getApplicationContext());
 		// 设置定位回调监听
 		mLocationClient.setLocationListener(this);
@@ -656,8 +656,7 @@ public class MainActivity extends BaseMainActivity implements
 		seg = (SegmentView) findViewById(R.id.main_segmentView1);
 		pager = (ViewPager) findViewById(R.id.Main_Middle);
 		mBar = (JPTabBar) findViewById(R.id.Main_bottom);
-		mBar.setContainer(pager);
-
+		mBar.setTabListener(this);
 		pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),
 				getPagers()));
 		radios = new RadioButton[4];
@@ -769,13 +768,13 @@ public class MainActivity extends BaseMainActivity implements
 	@Override
 	public void onBadgeUpdate(int count) {
 		// TODO Auto-generated method stub
-		mBar.showBadge(0,count + "");
+		mBar.showBadge(0,count);
 	}
 
 	@Override
 	public void onBadgesMinus(int count) {
 		// TODO Auto-generated method stub
-		mBar.showBadge(0,count + "");
+		mBar.showBadge(0,count);
 	}
 
 	@Override
@@ -884,15 +883,13 @@ public class MainActivity extends BaseMainActivity implements
 		if (index > radios.length) {
 			return;
 		}
-		if (index != 2) {
-			if (index < 2) {
-				((RadioButton) radios[index]).setChecked(true);
+			if (index > 1) {
+				pager.setCurrentItem(index+1);
 			}
 
 			else {
-				((RadioButton) radios[index - 1]).setChecked(true);
+				pager.setCurrentItem(index);
 			}
-		}
 		if (index == 1) {
 			((TextView) seg.getChildAt(0)).setSelected(true);
 			((TextView) seg.getChildAt(1)).setSelected(false);
@@ -901,13 +898,8 @@ public class MainActivity extends BaseMainActivity implements
 		else if (index == 2) {
 			((TextView) seg.getChildAt(1)).setSelected(true);
 			((TextView) seg.getChildAt(0)).setSelected(false);
-			((RadioButton) radios[index - 1]).setChecked(true);
 		}
 
 	}
 
-	@Override
-	public void onClickMiddle(View middleBtn) {
-
-	}
 }

@@ -11,9 +11,9 @@
         <com.peng.saishi.widget.autoviewpager.AutoScrollViewPager
             android:id="@+id/main_frag1_autoviewpager"
             android:layout_width="match_parent"
+            android:visibility="visible"
             android:layout_height="200dp" >
         </com.peng.saishi.widget.autoviewpager.AutoScrollViewPager>
-
         <RadioGroup
             android:id="@+id/radioGroup1"
             android:layout_width="match_parent"
@@ -29,8 +29,6 @@
             android:id="@+id/frag1_pagertitle"
             android:layout_width="match_parent"
             android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/blackwhite"
             android:ellipsize="marquee"
@@ -38,6 +36,7 @@
             android:gravity="center"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
+
             android:text="TextView" />
 
         <LinearLayout

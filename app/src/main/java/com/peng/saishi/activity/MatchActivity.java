@@ -1,21 +1,5 @@
 package com.peng.saishi.activity;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
-
-import okhttp3.Call;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import a.a.a.a.o;
-import android.R.transition;
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -25,14 +9,8 @@ import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.AdapterView;
+import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.RatingBar;
-import android.widget.TextView;
-
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.peng.saishi.R;
 import com.peng.saishi.activity.base.BaseBackActivity;
@@ -47,18 +25,17 @@ import com.peng.saishi.entity.QuestionInfo;
 import com.peng.saishi.entity.config.AppConfig;
 import com.peng.saishi.interfaces.service.MyStringCallBack;
 import com.peng.saishi.manager.NoDataManager;
-import com.peng.saishi.utils.ActChangeUtils;
-import com.peng.saishi.utils.CalendarUtils;
-import com.peng.saishi.utils.FrescoUtils;
-import com.peng.saishi.utils.GlobeScopeUtils;
-import com.peng.saishi.utils.JsonParser;
-import com.peng.saishi.utils.ShareAppUtils;
-import com.peng.saishi.utils.TimeUtils;
-import com.peng.saishi.utils.ToastUtils;
+import com.peng.saishi.utils.*;
 import com.peng.saishi.widget.BadgeView;
 import com.peng.saishi.widget.HorizontalListView;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
+import okhttp3.Call;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.*;
 
 @SuppressLint("InflateParams")
 public class MatchActivity extends BaseBackActivity implements OnClickListener,
@@ -323,7 +300,7 @@ public class MatchActivity extends BaseBackActivity implements OnClickListener,
 								String[] contents= getResources().getStringArray(R.array.contents);
 								for (int i = 0; i < random.nextInt(9) + 1; i++) {
 									NewInfo info = new NewInfo();
-									int a=random.nextInt(9) + 1;
+									int a=random.nextInt(9) ;
 									info.setTitle(titles[a]);
 									info.setContent(contents[a]);
 									info.setMatchid(MatchActivity.this.info

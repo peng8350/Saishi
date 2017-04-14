@@ -1,12 +1,5 @@
 package com.peng.saishi.activity;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.Dialog;
 import android.graphics.BitmapFactory;
 import android.view.View;
@@ -16,7 +9,6 @@ import cn.finalteam.galleryfinal.GalleryFinal.OnHanlderResultCallback;
 import cn.finalteam.galleryfinal.model.PhotoInfo;
 import cn.jpush.im.android.api.JMessageClient;
 import cn.jpush.im.api.BasicCallback;
-
 import com.daimajia.androidanimations.library.YoYo;
 import com.daimajia.androidanimations.library.attention.ShakeAnimator;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -34,6 +26,12 @@ import com.peng.saishi.utils.DialogUtils;
 import com.peng.saishi.utils.FIleUtils;
 import com.peng.saishi.utils.FrescoUtils;
 import com.peng.saishi.utils.ToastUtils;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class RegMoreActivity extends BaseBackActivity implements
 		OnHanlderResultCallback, UserRegListener {
@@ -103,6 +101,7 @@ public class RegMoreActivity extends BaseBackActivity implements
 		}
 		wait_dialog = DialogUtils.createLoadingDialog(this, "注册中...");
 		wait_dialog.show();
+
 		JMessageClient.register(user, pswd, new BasicCallback() {
 
 			@Override
@@ -115,6 +114,7 @@ public class RegMoreActivity extends BaseBackActivity implements
 					params.put("name", name);
 					params.put("intro", intro);
 					params.put("sex", sex);
+
 					FIleUtils.saveBitmap(BitmapFactory.decodeFile(PicPath),
 							AppConfig.pic_temp, new SaveLIstener() {
 

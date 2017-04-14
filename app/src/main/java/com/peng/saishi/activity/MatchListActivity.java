@@ -1,14 +1,8 @@
 package com.peng.saishi.activity;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.TextView;
-
 import com.peng.saishi.R;
 import com.peng.saishi.activity.base.BaseBackActivity;
 import com.peng.saishi.adapter.MatchPagereAdapter;
@@ -18,6 +12,11 @@ import com.peng.saishi.utils.GlobeScopeUtils;
 import com.peng.saishi.utils.MatchUtils;
 import com.peng.saishi.utils.TimeUtils;
 import com.peng.saishi.widget.pagertab.PagerSlidingTabStrip;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class MatchListActivity extends BaseBackActivity {
 
@@ -43,6 +42,7 @@ public class MatchListActivity extends BaseBackActivity {
 		strip = (PagerSlidingTabStrip) findViewById(R.id.MatchList_pagerSliding);
 		// 嘉数据
 		datas = MatchUtils.getPart1Match(GlobeScopeUtils.getMatches(), type);
+		System.out.println(datas.size());
 		// 要处理分类
 		List<MatchInfo> list1 = new ArrayList<MatchInfo>();
 		List<MatchInfo> list2 = new ArrayList<MatchInfo>();

@@ -36,7 +36,7 @@
         <item name="android:textColor">#fff</item>
     </style>
     
-    <style name="downstyle" parent="@android:style/Theme.Holo.Light">
+    <style name="downstyle" parent="@style/MyStyle">
            <item name="android:windowAnimationStyle">@style/activitytrasction</item>
                  <item name="android:windowNoTitle">true</item>
     </style>

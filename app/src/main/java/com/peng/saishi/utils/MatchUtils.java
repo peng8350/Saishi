@@ -1,9 +1,9 @@
 package com.peng.saishi.utils;
 
+import com.peng.saishi.entity.MatchInfo;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.peng.saishi.entity.MatchInfo;
 
 
 /*
@@ -17,7 +17,9 @@ public class MatchUtils {
 	public static List<MatchInfo> getPart1Match(List<MatchInfo> biglist, int type) {
 		List<MatchInfo> params = new ArrayList<>();
 		for (MatchInfo info : biglist) {
+			System.out.println(info.getType1());
 			if (info.getType1() == type) {
+
 				params.add(info);
 			}
 		}

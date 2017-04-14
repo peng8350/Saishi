@@ -21,7 +21,7 @@ public class AppConfig {
 	// 短信接口密码
 	public static final String mob_pswd = "10de0490a4ad510aeb92ca4be14de9bd";
 	// 指向服务端的ＩＰ地址
-	public static final String IP = "127.0.0.1"; // 指向服务端的端口,部署到远程服务器修改的地方1
+	public static final String IP = "192.168.1.105"; // 指向服务端的端口,部署到远程服务器修改的地方1
 	public static final int PORT = 8080; // 部署到远程服务器修改的地方2
 
 	public static final String statement = "";// 部署到远程服务器修改的地方3

@@ -67,24 +67,23 @@
     <com.jpeng.jptabbar.JPTabBar
         android:id="@+id/Main_bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/tab_bg"
         android:orientation="horizontal"
         app:TabAnimate="Scale"
-        app:TabIconSize="32dp"
         >
 
 
     </com.jpeng.jptabbar.JPTabBar>
 
-    <android.support.v4.view.ViewPager
+    <com.peng.saishi.widget.NoScrollViewPager
         android:id="@+id/Main_Middle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/Main_bottom"
         android:layout_below="@id/Main_Top"
         android:background="@color/Gray" >
-    </android.support.v4.view.ViewPager>
+    </com.peng.saishi.widget.NoScrollViewPager>
 
 </RelativeLayout>

@@ -348,6 +348,7 @@ public class LoginActivity extends BaseActivity implements OnKeyListener,
 			final Map<String, String> map = new HashMap<>();
 			final boolean fitst = db_matches.size() == 0;
 			map.put("user", user);
+
 			map.put("pswd", pswd);
 			map.put("first",
 					db_matches == null || db_matches.size() == 0 ? "true"
@@ -408,13 +409,10 @@ public class LoginActivity extends BaseActivity implements OnKeyListener,
 											MatchInfo.saveInTx(db_matches);
 
 										}
-
 										me = JsonParser.getBeanFromJson(
 												res_obj.getJSONObject("user"),
 												User.class);
-
 										me.setMatchs(db_matches);
-
 										me.setTeam1(JsonParser.getListFromJson(
 												res_obj.getJSONArray("team1"),
 												com.peng.saishi.entity.TeamInfo.class));
